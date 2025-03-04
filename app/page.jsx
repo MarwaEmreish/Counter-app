@@ -8,17 +8,20 @@
 import { useState } from "react"  // Use this to add state to our components
 // state lets us keep track of changing date and show it in the components
 
+import Form from "./Components/Form" //important
+import Table from "./Components/Table" //important
+
 function HomePage(){
-const [count, setCount] = useState(0)
-
-
     return (
         <div>
-            <h1>Counter: {count}</h1>
-            <button onClick={()=>{
-                // write some javascript for this function to call
-                setCount(count + 1)
-            }}> Add  One </button>
+            <h1> FavLinks </h1>
+
+            <Form />  {/*custom component*/}
+
+            { /* a table the user can use to see their submission*/}
+
+            <Table />
+
         </div>
     )
 }
