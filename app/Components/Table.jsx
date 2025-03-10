@@ -1,4 +1,5 @@
-function Table(){
+function Table(props){
+
 
     return(
         // some code will go in here
@@ -11,6 +12,25 @@ function Table(){
                 </tr>
             </thead>
 
+            <tbody>
+               
+                {/*<tr>
+                    <td>Github</td>
+                    <td>https://www.github.com</td>
+                </tr>*/}
+
+
+                {
+                    props.data.map((favLink, index)=>{  //to create a function
+                     return(<tr key={index}>  {/*key to run perfectly*/}
+                        <td>{favLink.name}</td>
+                        <td>{favLink.URL}</td>
+                    </tr>)
+                    })
+                    
+                }
+                
+            </tbody>
 
         </table>
 
